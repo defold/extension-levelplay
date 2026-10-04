@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "catalog_version": "2026-07-25",
+  "catalog_version": "2026-10-04",
   "sources": {
     "android_mediation_matrix": "https://docs.unity.com/en-us/grow/levelplay/sdk/android/mediation-networks",
     "ios_mediation_matrix": "https://docs.unity.com/en-us/grow/levelplay/sdk/ios/mediation-networks",
@@ -11,19 +11,19 @@
   },
   "levelplay": {
     "android": {
-      "coordinate": "com.unity3d.ads-mediation:mediation-sdk:9.5.0",
+      "coordinate": "com.unity3d.ads-mediation:mediation-sdk:9.6.1",
       "repository": "https://repo1.maven.org/maven2",
       "dependencies": [
-        "com.unity3d.ads-mediation:adquality-sdk:9.8.0",
+        "com.unity3d.ads-mediation:adquality-sdk:9.10.0",
         "com.google.android.gms:play-services-appset:16.0.0",
         "com.google.android.gms:play-services-ads-identifier:18.1.0",
         "com.google.android.gms:play-services-basement:18.1.0"
       ]
     },
     "ios": {
-      "version": "9.5.0.0",
+      "version": "9.6.1.0",
       "minimum_version": "15.0",
-      "ad_quality_version": "9.8.0",
+      "ad_quality_version": "9.10.0",
       "skadnetwork_note": "These are the primary IDs in Unity's LevelPlay manual. Additional partner IDs linked by Unity are app- and network-specific and must be added separately.",
       "skadnetwork_ids": [
         "su67r6k2v3.skadnetwork"
@@ -34,14 +34,14 @@
     "applovin": {
       "display_name": "AppLovin",
       "android": {
-        "adapter": "com.unity3d.ads-mediation:applovin-adapter:5.8.0",
+        "adapter": "com.unity3d.ads-mediation:applovin-adapter:5.9.0",
         "dependencies": [
-          "com.applovin:applovin-sdk:13.6.3"
+          "com.applovin:applovin-sdk:13.6.4"
         ]
       },
       "ios": {
-        "adapter_version": "5.7.0.0",
-        "supported_sdk_version": "13.6.3",
+        "adapter_version": "5.9.0.0",
+        "supported_sdk_version": "13.6.4",
         "skadnetwork_ids": [
           "ludvb6z3bs.skadnetwork"
         ]
@@ -50,15 +50,15 @@
     "aps": {
       "display_name": "Amazon Publisher Services",
       "android": {
-        "adapter": "com.unity3d.ads-mediation:aps-adapter:5.2.0",
+        "adapter": "com.unity3d.ads-mediation:aps-adapter:5.3.0",
         "dependencies": [
           "com.amazon.android:aps-sdk:12.0.0",
-          "org.jetbrains.kotlin:kotlin-stdlib:2.1.0"
+          "org.jetbrains.kotlin:kotlin-stdlib:2.1.21"
         ]
       },
       "ios": {
-        "adapter_version": "5.7.0.0",
-        "supported_sdk_version": "5.6.3",
+        "adapter_version": "5.12.0.0",
+        "supported_sdk_version": "5.6.6",
         "skadnetwork_ids": [
           "p78axxw29g.skadnetwork"
         ]
@@ -67,17 +67,17 @@
     "bidmachine": {
       "display_name": "BidMachine",
       "android": {
-        "adapter": "com.unity3d.ads-mediation:bidmachine-adapter:5.7.0",
+        "adapter": "com.unity3d.ads-mediation:bidmachine-adapter:5.8.0",
         "dependencies": [
-          "io.bidmachine:ads:3.7.1"
+          "io.bidmachine:ads:3.8.0"
         ],
         "repositories": [
           "https://artifactory.bidmachine.io/bidmachine"
         ]
       },
       "ios": {
-        "adapter_version": "5.7.0.0",
-        "supported_sdk_version": "3.7.1",
+        "adapter_version": "5.9.0.0",
+        "supported_sdk_version": "3.8.1",
         "skadnetwork_ids": [
           "wg4vff78zm.skadnetwork"
         ]
@@ -86,31 +86,31 @@
     "bigo": {
       "display_name": "BIGO Ads",
       "android": {
-        "adapter": "com.unity3d.ads-mediation:bigo-adapter:5.10.0",
+        "adapter": "com.unity3d.ads-mediation:bigo-adapter:5.13.0",
         "dependencies": [
-          "com.bigossp:bigo-ads:5.10.1"
+          "com.bigossp:bigo-ads:6.1.0"
         ]
       },
       "ios": {
-        "adapter_version": "5.10.0.0",
-        "supported_sdk_version": "5.3.0",
+        "adapter_version": "5.12.0.0",
+        "supported_sdk_version": "6.1.0",
         "skadnetwork_ids": []
       }
     },
     "chartboost": {
       "display_name": "Chartboost",
       "android": {
-        "adapter": "com.unity3d.ads-mediation:chartboost-adapter:5.8.0",
+        "adapter": "com.unity3d.ads-mediation:chartboost-adapter:5.10.0",
         "dependencies": [
-          "com.chartboost:chartboost-sdk:9.13.0"
+          "com.chartboost:chartboost-sdk:9.14.1"
         ],
         "repositories": [
           "https://cboost.jfrog.io/artifactory/chartboost-ads/"
         ]
       },
       "ios": {
-        "adapter_version": "5.5.0.0",
-        "supported_sdk_version": "9.13.0",
+        "adapter_version": "5.9.0.0",
+        "supported_sdk_version": "9.14.2",
         "skadnetwork_ids": [
           "f38h382jlk.skadnetwork"
         ]
@@ -119,14 +119,14 @@
     "dt_exchange": {
       "display_name": "DT Exchange",
       "android": {
-        "adapter": "com.unity3d.ads-mediation:fyber-adapter:5.9.0",
+        "adapter": "com.unity3d.ads-mediation:fyber-adapter:5.10.0",
         "dependencies": [
-          "com.fyber:marketplace-sdk:8.4.6"
+          "com.fyber:marketplace-sdk:8.4.7"
         ]
       },
       "ios": {
-        "adapter_version": "5.9.0.0",
-        "supported_sdk_version": "8.4.8",
+        "adapter_version": "5.13.0.0",
+        "supported_sdk_version": "8.5.0",
         "skadnetwork_ids": [
           "9g2aggbj52.skadnetwork"
         ]
@@ -135,17 +135,17 @@
     "admob": {
       "display_name": "Google AdMob and Ad Manager",
       "android": {
-        "adapter": "com.unity3d.ads-mediation:admob-adapter:5.12.0",
+        "adapter": "com.unity3d.ads-mediation:admob-adapter:5.16.0",
         "dependencies": [
-          "com.google.android.libraries.ads.mobile.sdk:ads-mobile-sdk:1.3.0"
+          "com.google.android.libraries.ads.mobile.sdk:ads-mobile-sdk:1.5.0"
         ],
         "repositories": [
           "google"
         ]
       },
       "ios": {
-        "adapter_version": "5.12.0.0",
-        "supported_sdk_version": "13.7.0",
+        "adapter_version": "5.17.0.0",
+        "supported_sdk_version": "13.11.0",
         "skadnetwork_ids": [
           "cstr6suwn9.skadnetwork"
         ]
@@ -154,14 +154,14 @@
     "hyprmx": {
       "display_name": "HyprMX",
       "android": {
-        "adapter": "com.unity3d.ads-mediation:hyprmx-adapter:5.3.0",
+        "adapter": "com.unity3d.ads-mediation:hyprmx-adapter:5.4.0",
         "dependencies": [
-          "com.hyprmx.android:HyprMX-SDK:6.4.6"
+          "com.hyprmx.android:HyprMX-SDK:6.4.7"
         ]
       },
       "ios": {
-        "adapter_version": "5.4.0.0",
-        "supported_sdk_version": "6.4.6",
+        "adapter_version": "5.5.0.0",
+        "supported_sdk_version": "6.4.7",
         "skadnetwork_ids": [
           "nu4557a4je.skadnetwork"
         ]
@@ -170,14 +170,14 @@
     "inmobi": {
       "display_name": "InMobi",
       "android": {
-        "adapter": "com.unity3d.ads-mediation:inmobi-adapter:5.8.0",
+        "adapter": "com.unity3d.ads-mediation:inmobi-adapter:5.10.0",
         "dependencies": [
-          "com.inmobi.monetization:inmobi-ads-kotlin:11.4.0"
+          "com.inmobi.monetization:inmobi-ads-kotlin:11.5.0"
         ]
       },
       "ios": {
-        "adapter_version": "5.8.0.0",
-        "supported_sdk_version": "11.4.0",
+        "adapter_version": "5.10.0.0",
+        "supported_sdk_version": "11.5.0",
         "skadnetwork_ids": [
           "wzmmz9fp6w.skadnetwork"
         ]
@@ -186,14 +186,14 @@
     "liftoff": {
       "display_name": "Liftoff Monetize",
       "android": {
-        "adapter": "com.unity3d.ads-mediation:vungle-adapter:5.12.0",
+        "adapter": "com.unity3d.ads-mediation:vungle-adapter:5.16.0",
         "dependencies": [
-          "com.vungle:vungle-ads:7.7.6"
+          "com.vungle:vungle-ads:7.7.9"
         ]
       },
       "ios": {
-        "adapter_version": "5.11.0.0",
-        "supported_sdk_version": "7.7.5",
+        "adapter_version": "5.16.0.0",
+        "supported_sdk_version": "7.7.8",
         "skadnetwork_ids": [
           "gta9lk7p23.skadnetwork"
         ]
@@ -202,14 +202,14 @@
     "line": {
       "display_name": "LY Ads Network",
       "android": {
-        "adapter": "com.unity3d.ads-mediation:line-adapter:5.3.0",
+        "adapter": "com.unity3d.ads-mediation:line-adapter:5.4.0",
         "dependencies": [
           "com.linecorp.adsnetwork:fivead:3.1.1"
         ]
       },
       "ios": {
-        "adapter_version": "5.5.0.0",
-        "supported_sdk_version": "3.0.1",
+        "adapter_version": "5.8.0.0",
+        "supported_sdk_version": "3.1.1",
         "skadnetwork_ids": [
           "vutu7akeur.skadnetwork"
         ]
@@ -218,14 +218,14 @@
     "meta": {
       "display_name": "Meta Audience Network",
       "android": {
-        "adapter": "com.unity3d.ads-mediation:facebook-adapter:5.4.0",
+        "adapter": "com.unity3d.ads-mediation:facebook-adapter:5.5.0",
         "dependencies": [
           "com.facebook.android:audience-network-sdk:6.22.0"
         ]
       },
       "ios": {
-        "adapter_version": "5.3.0.0",
-        "supported_sdk_version": "6.21.1",
+        "adapter_version": "5.5.0.0",
+        "supported_sdk_version": "6.22.0",
         "skadnetwork_ids": [
           "v9wttpbfk9.skadnetwork",
           "n38lu8286q.skadnetwork"
@@ -235,9 +235,9 @@
     "mintegral": {
       "display_name": "Mintegral",
       "android": {
-        "adapter": "com.unity3d.ads-mediation:mintegral-adapter:5.18.0",
+        "adapter": "com.unity3d.ads-mediation:mintegral-adapter:5.20.0",
         "dependencies": [
-          "com.mbridge.msdk.oversea:mbridge_android_sdk:16.9.91",
+          "com.mbridge.msdk.oversea:mbridge_android_sdk:17.1.81",
           "androidx.recyclerview:recyclerview:1.4.0"
         ],
         "repositories": [
@@ -246,8 +246,8 @@
         ]
       },
       "ios": {
-        "adapter_version": "5.18.0.0",
-        "supported_sdk_version": "8.1.5",
+        "adapter_version": "5.21.0.0",
+        "supported_sdk_version": "8.1.7",
         "skadnetwork_ids": [
           "kbd757ywx3.skadnetwork"
         ]
@@ -256,62 +256,62 @@
     "mobilefuse": {
       "display_name": "MobileFuse",
       "android": {
-        "adapter": "com.unity3d.ads-mediation:mobilefuse-adapter:5.3.0",
+        "adapter": "com.unity3d.ads-mediation:mobilefuse-adapter:5.4.0",
         "dependencies": [
-          "com.mobilefuse.sdk:mobilefuse-sdk-core:1.11.0"
+          "com.mobilefuse.sdk:mobilefuse-sdk-core:1.12.0"
         ]
       },
       "ios": {
-        "adapter_version": "5.3.0.0",
-        "supported_sdk_version": "1.11.0",
+        "adapter_version": "5.5.0.0",
+        "supported_sdk_version": "1.12.0",
         "skadnetwork_ids": []
       }
     },
     "moloco": {
       "display_name": "Moloco",
       "android": {
-        "adapter": "com.unity3d.ads-mediation:moloco-adapter:5.14.0",
+        "adapter": "com.unity3d.ads-mediation:moloco-adapter:5.19.0",
         "dependencies": [
-          "com.moloco.sdk:moloco-sdk:4.10.1"
+          "com.moloco.sdk:moloco-sdk:4.13.0"
         ]
       },
       "ios": {
-        "adapter_version": "5.15.0.0",
-        "supported_sdk_version": "4.8.1",
+        "adapter_version": "5.19.0.0",
+        "supported_sdk_version": "4.11.0",
         "skadnetwork_ids": []
       }
     },
     "ogury": {
       "display_name": "Ogury",
       "android": {
-        "adapter": "com.unity3d.ads-mediation:ogury-adapter:5.4.0",
+        "adapter": "com.unity3d.ads-mediation:ogury-adapter:5.5.0",
         "dependencies": [
-          "co.ogury:ogury-sdk:6.2.2"
+          "co.ogury:ogury-sdk:6.3.1"
         ],
         "repositories": [
           "https://maven.ogury.co"
         ]
       },
       "ios": {
-        "adapter_version": "5.5.0.0",
-        "supported_sdk_version": "5.2.3",
+        "adapter_version": "5.9.0.0",
+        "supported_sdk_version": "5.3.1",
         "skadnetwork_ids": []
       }
     },
     "pangle": {
       "display_name": "Pangle",
       "android": {
-        "adapter": "com.unity3d.ads-mediation:pangle-adapter:5.21.0",
+        "adapter": "com.unity3d.ads-mediation:pangle-adapter:5.24.0",
         "dependencies": [
-          "com.pangle.global:pag-sdk:8.1.0.5"
+          "com.pangle.global:pag-sdk:8.3.0.4"
         ],
         "repositories": [
           "https://artifact.bytedance.com/repository/pangle"
         ]
       },
       "ios": {
-        "adapter_version": "5.31.0.0",
-        "supported_sdk_version": "8.1.1.1",
+        "adapter_version": "5.36.0.0",
+        "supported_sdk_version": "8.3.0.8",
         "skadnetwork_ids": [
           "22mmun2rn5.skadnetwork",
           "238da6jt44.skadnetwork"
@@ -321,37 +321,37 @@
     "pubmatic": {
       "display_name": "PubMatic",
       "android": {
-        "adapter": "com.unity3d.ads-mediation:pubmatic-adapter:5.8.0",
+        "adapter": "com.unity3d.ads-mediation:pubmatic-adapter:5.11.0",
         "dependencies": [
-          "com.pubmatic.sdk:openwrap:5.2.0"
+          "com.pubmatic.sdk:openwrap:5.4.1"
         ],
         "repositories": [
           "https://repo.pubmatic.com/artifactory/public-repos"
         ]
       },
       "ios": {
-        "adapter_version": "5.7.0.0",
-        "supported_sdk_version": "5.2.0",
+        "adapter_version": "5.11.0.0",
+        "supported_sdk_version": "5.4.1",
         "skadnetwork_ids": []
       }
     },
     "smaato": {
       "display_name": "Smaato",
       "android": {
-        "adapter": "com.unity3d.ads-mediation:smaato-adapter:5.4.0",
+        "adapter": "com.unity3d.ads-mediation:smaato-adapter:5.6.0",
         "dependencies": [
-          "com.smaato.android.sdk:smaato-sdk-banner:23.2.0",
-          "com.smaato.android.sdk:smaato-sdk-in-app-bidding:23.2.0",
-          "com.smaato.android.sdk:smaato-sdk-interstitial:23.2.0",
-          "com.smaato.android.sdk:smaato-sdk-rewarded-ads:23.2.0"
+          "com.smaato.android.sdk:smaato-sdk-banner:23.2.2",
+          "com.smaato.android.sdk:smaato-sdk-in-app-bidding:23.2.2",
+          "com.smaato.android.sdk:smaato-sdk-interstitial:23.2.2",
+          "com.smaato.android.sdk:smaato-sdk-rewarded-ads:23.2.2"
         ],
         "repositories": [
           "https://s3.amazonaws.com/smaato-sdk-releases/"
         ]
       },
       "ios": {
-        "adapter_version": "5.3.0.0",
-        "supported_sdk_version": "23.2.0",
+        "adapter_version": "5.6.0.0",
+        "supported_sdk_version": "23.2.2",
         "skadnetwork_ids": [
           "cdkw7geqsh.skadnetwork"
         ]
@@ -360,16 +360,16 @@
     "superawesome": {
       "display_name": "SuperAwesome",
       "android": {
-        "adapter": "com.unity3d.ads-mediation:superawesome-adapter:5.4.0",
+        "adapter": "com.unity3d.ads-mediation:superawesome-adapter:5.6.0",
         "dependencies": [
-          "tv.superawesome.sdk.publisher:superawesome:10.3.1"
+          "tv.superawesome.sdk.publisher:superawesome:10.3.2"
         ],
         "repositories": [
           "https://aa-sdk.s3-eu-west-1.amazonaws.com/android_repo"
         ]
       },
       "ios": {
-        "adapter_version": "5.0.0.0",
+        "adapter_version": "5.1.0.0",
         "supported_sdk_version": "9.4.0",
         "skadnetwork_ids": []
       }
@@ -377,14 +377,14 @@
     "unity_ads": {
       "display_name": "Unity Ads",
       "android": {
-        "adapter": "com.unity3d.ads-mediation:unityads-adapter:5.11.0",
+        "adapter": "com.unity3d.ads-mediation:unityads-adapter:5.14.0",
         "dependencies": [
-          "com.unity3d.ads:unity-ads:4.19.0"
+          "com.unity3d.ads:unity-ads:4.21.0"
         ]
       },
       "ios": {
-        "adapter_version": "5.9.0.0",
-        "supported_sdk_version": "4.19.0",
+        "adapter_version": "5.13.0.0",
+        "supported_sdk_version": "4.21.0",
         "skadnetwork_ids": [
           "4dzt52r2t5.skadnetwork"
         ]
@@ -393,9 +393,9 @@
     "verve": {
       "display_name": "Verve",
       "android": {
-        "adapter": "com.unity3d.ads-mediation:verve-adapter:5.6.0",
+        "adapter": "com.unity3d.ads-mediation:verve-adapter:5.8.0",
         "dependencies": [
-          "net.pubnative:hybid.sdk:3.9.0"
+          "net.pubnative:hybid.sdk:3.9.2"
         ],
         "repositories": [
           "https://verve.jfrog.io/artifactory/verve-gradle-release"
@@ -410,14 +410,14 @@
     "vk": {
       "display_name": "VK Ad Network",
       "android": {
-        "adapter": "com.unity3d.ads-mediation:mytarget-adapter:5.5.0",
+        "adapter": "com.unity3d.ads-mediation:mytarget-adapter:5.6.0",
         "dependencies": [
-          "com.my.target:mytarget-sdk:5.47.1"
+          "com.my.target:mytarget-sdk:5.51.2"
         ]
       },
       "ios": {
-        "adapter_version": "5.12.0.0",
-        "supported_sdk_version": "5.45.0",
+        "adapter_version": "5.13.0.0",
+        "supported_sdk_version": "5.46.0",
         "skadnetwork_ids": [
           "n9x2a789qt.skadnetwork",
           "r26jy69rpl.skadnetwork"
@@ -427,21 +427,21 @@
     "yandex": {
       "display_name": "Yandex Ads",
       "android": {
-        "adapter": "com.unity3d.ads-mediation:yandex-adapter:5.11.0",
+        "adapter": "com.unity3d.ads-mediation:yandex-adapter:5.15.0",
         "dependencies": [
-          "com.yandex.android:mobileads:8.2.0"
+          "com.yandex.android:mobileads:8.5.0"
         ]
       },
       "ios": {
-        "adapter_version": "5.11.0.0",
-        "supported_sdk_version": "8.2.1",
+        "adapter_version": "5.16.0.0",
+        "supported_sdk_version": "8.6.0",
         "skadnetwork_ids": []
       }
     },
     "yso": {
       "display_name": "YSO Network",
       "android": {
-        "adapter": "com.unity3d.ads-mediation:yso-adapter:5.5.0",
+        "adapter": "com.unity3d.ads-mediation:yso-adapter:5.6.0",
         "dependencies": [
           "com.ysocorp:ysonetwork:1.3.8"
         ],
@@ -450,7 +450,7 @@
         ]
       },
       "ios": {
-        "adapter_version": "5.1.0.0",
+        "adapter_version": "5.2.0.0",
         "supported_sdk_version": "1.2.1",
         "skadnetwork_ids": [
           "pt89h2hlb7.skadnetwork"
@@ -460,8 +460,8 @@
     "tencent": {
       "display_name": "Tencent Ads",
       "ios": {
-        "adapter_version": "5.6.0.0",
-        "supported_sdk_version": "4.15.90",
+        "adapter_version": "5.7.0.0",
+        "supported_sdk_version": "4.16.05",
         "skadnetwork_ids": []
       }
     }

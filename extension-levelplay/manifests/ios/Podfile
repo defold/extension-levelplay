@@ -2,112 +2,112 @@
 # Run `python3 updater/ios.py check` in CI.
 platform :ios, '15.0'
 
-pod 'IronSourceSDK', '9.5.0.0'
-pod 'IronSourceAdQualitySDK', '9.8.0'
+pod 'IronSourceSDK', '9.6.1.0'
+pod 'IronSourceAdQualitySDK', '9.10.0'
 
 {{#levelplay.applovin_ios}}
 # AppLovin
-pod 'IronSourceAppLovinAdapter', '5.7.0.0'
+pod 'IronSourceAppLovinAdapter', '5.9.0.0'
 {{/levelplay.applovin_ios}}
 
 {{#levelplay.aps_ios}}
 # Amazon Publisher Services
-pod 'IronSourceAPSAdapter', '5.7.0.0'
+pod 'IronSourceAPSAdapter', '5.12.0.0'
 {{/levelplay.aps_ios}}
 
 {{#levelplay.bidmachine_ios}}
 # BidMachine
-pod 'IronSourceBidMachineAdapter', '5.7.0.0'
+pod 'IronSourceBidMachineAdapter', '5.9.0.0'
 {{/levelplay.bidmachine_ios}}
 
 {{#levelplay.bigo_ios}}
 # BIGO Ads
-pod 'IronSourceBigoAdapter', '5.10.0.0'
+pod 'IronSourceBigoAdapter', '5.12.0.0'
 {{/levelplay.bigo_ios}}
 
 {{#levelplay.chartboost_ios}}
 # Chartboost
-pod 'IronSourceChartboostAdapter', '5.5.0.0'
+pod 'IronSourceChartboostAdapter', '5.9.0.0'
 {{/levelplay.chartboost_ios}}
 
 {{#levelplay.dt_exchange_ios}}
 # DT Exchange
-pod 'IronSourceFyberAdapter', '5.9.0.0'
+pod 'IronSourceFyberAdapter', '5.13.0.0'
 {{/levelplay.dt_exchange_ios}}
 
 {{#levelplay.admob_ios}}
 # Google AdMob and Ad Manager
-pod 'IronSourceAdMobAdapter', '5.12.0.0'
+pod 'IronSourceAdMobAdapter', '5.17.0.0'
 {{/levelplay.admob_ios}}
 
 {{#levelplay.hyprmx_ios}}
 # HyprMX
-pod 'IronSourceHyprMXAdapter', '5.4.0.0'
+pod 'IronSourceHyprMXAdapter', '5.5.0.0'
 {{/levelplay.hyprmx_ios}}
 
 {{#levelplay.inmobi_ios}}
 # InMobi
-pod 'IronSourceInMobiAdapter', '5.8.0.0'
+pod 'IronSourceInMobiAdapter', '5.10.0.0'
 {{/levelplay.inmobi_ios}}
 
 {{#levelplay.liftoff_ios}}
 # Liftoff Monetize
-pod 'IronSourceVungleAdapter', '5.11.0.0'
+pod 'IronSourceVungleAdapter', '5.16.0.0'
 {{/levelplay.liftoff_ios}}
 
 {{#levelplay.line_ios}}
 # LY Ads Network
-pod 'IronSourceLineAdapter', '5.5.0.0'
+pod 'IronSourceLineAdapter', '5.8.0.0'
 {{/levelplay.line_ios}}
 
 {{#levelplay.meta_ios}}
 # Meta Audience Network
-pod 'IronSourceFacebookAdapter', '5.3.0.0'
+pod 'IronSourceFacebookAdapter', '5.5.0.0'
 {{/levelplay.meta_ios}}
 
 {{#levelplay.mintegral_ios}}
 # Mintegral
-pod 'IronSourceMintegralAdapter', '5.18.0.0'
+pod 'IronSourceMintegralAdapter', '5.21.0.0'
 {{/levelplay.mintegral_ios}}
 
 {{#levelplay.mobilefuse_ios}}
 # MobileFuse
-pod 'IronSourceMobileFuseAdapter', '5.3.0.0'
+pod 'IronSourceMobileFuseAdapter', '5.5.0.0'
 {{/levelplay.mobilefuse_ios}}
 
 {{#levelplay.moloco_ios}}
 # Moloco
-pod 'IronSourceMolocoAdapter', '5.15.0.0'
+pod 'IronSourceMolocoAdapter', '5.19.0.0'
 {{/levelplay.moloco_ios}}
 
 {{#levelplay.ogury_ios}}
 # Ogury
-pod 'IronSourceOguryAdapter', '5.5.0.0'
+pod 'IronSourceOguryAdapter', '5.9.0.0'
 {{/levelplay.ogury_ios}}
 
 {{#levelplay.pangle_ios}}
 # Pangle
-pod 'IronSourcePangleAdapter', '5.31.0.0'
+pod 'IronSourcePangleAdapter', '5.36.0.0'
 {{/levelplay.pangle_ios}}
 
 {{#levelplay.pubmatic_ios}}
 # PubMatic
-pod 'LevelPlayPubMaticAdapter', '5.7.0.0'
+pod 'LevelPlayPubMaticAdapter', '5.11.0.0'
 {{/levelplay.pubmatic_ios}}
 
 {{#levelplay.smaato_ios}}
 # Smaato
-pod 'IronSourceSmaatoAdapter', '5.3.0.0'
+pod 'IronSourceSmaatoAdapter', '5.6.0.0'
 {{/levelplay.smaato_ios}}
 
 {{#levelplay.superawesome_ios}}
 # SuperAwesome
-pod 'IronSourceSuperAwesomeAdapter', '5.0.0.0'
+pod 'IronSourceSuperAwesomeAdapter', '5.1.0.0'
 {{/levelplay.superawesome_ios}}
 
 {{#levelplay.unity_ads_ios}}
 # Unity Ads
-pod 'IronSourceUnityAdsAdapter', '5.9.0.0'
+pod 'IronSourceUnityAdsAdapter', '5.13.0.0'
 {{/levelplay.unity_ads_ios}}
 
 {{#levelplay.verve_ios}}
@@ -117,20 +117,20 @@ pod 'IronSourceVerveAdapter', '5.5.0.0'
 
 {{#levelplay.vk_ios}}
 # VK Ad Network
-pod 'IronSourceMyTargetAdapter', '5.12.0.0'
+pod 'IronSourceMyTargetAdapter', '5.13.0.0'
 {{/levelplay.vk_ios}}
 
 {{#levelplay.yandex_ios}}
 # Yandex Ads
-pod 'IronSourceYandexAdapter', '5.11.0.0'
+pod 'IronSourceYandexAdapter', '5.16.0.0'
 {{/levelplay.yandex_ios}}
 
 {{#levelplay.yso_ios}}
 # YSO Network
-pod 'IronSourceYSOAdapter', '5.1.0.0'
+pod 'IronSourceYSOAdapter', '5.2.0.0'
 {{/levelplay.yso_ios}}
 
 {{#levelplay.tencent_ios}}
 # Tencent Ads
-pod 'IronSourceTencentAdapter', '5.6.0.0'
+pod 'IronSourceTencentAdapter', '5.7.0.0'
 {{/levelplay.tencent_ios}}

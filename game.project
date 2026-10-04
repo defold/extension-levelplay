@@ -10,7 +10,7 @@ height = 1280
 
 [project]
 title = LevelPlay
-version = 2.0.0
+version = 2.0.2
 dependencies#0 = https://github.com/andsve/dirtylarry/archive/master.zip
 dependencies#1 = https://github.com/defold/extension-automation-bridge/archive/refs/tags/2.0.1.zip
 

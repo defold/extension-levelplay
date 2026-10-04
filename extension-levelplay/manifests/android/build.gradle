@@ -37,9 +37,9 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.unity3d.ads-mediation:mediation-sdk:9.5.0'
+    implementation 'com.unity3d.ads-mediation:mediation-sdk:9.6.1'
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.unity3d.ads-mediation:adquality-sdk:9.8.0'
+    implementation 'com.unity3d.ads-mediation:adquality-sdk:9.10.0'
     {{#levelplay.android_google_identifiers}}
     implementation 'com.google.android.gms:play-services-appset:16.0.0'
     {{/levelplay.android_google_identifiers}}
@@ -52,156 +52,156 @@ dependencies {
 
     {{#levelplay.applovin_android}}
     // AppLovin
-    implementation 'com.unity3d.ads-mediation:applovin-adapter:5.8.0'
-    implementation 'com.applovin:applovin-sdk:13.6.3'
+    implementation 'com.unity3d.ads-mediation:applovin-adapter:5.9.0'
+    implementation 'com.applovin:applovin-sdk:13.6.4'
     {{/levelplay.applovin_android}}
 
     {{#levelplay.aps_android}}
     // Amazon Publisher Services
-    implementation 'com.unity3d.ads-mediation:aps-adapter:5.2.0'
+    implementation 'com.unity3d.ads-mediation:aps-adapter:5.3.0'
     implementation 'com.amazon.android:aps-sdk:12.0.0'
-    implementation 'org.jetbrains.kotlin:kotlin-stdlib:2.1.0'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:2.1.21'
     {{/levelplay.aps_android}}
 
     {{#levelplay.bidmachine_android}}
     // BidMachine
-    implementation 'com.unity3d.ads-mediation:bidmachine-adapter:5.7.0'
-    implementation 'io.bidmachine:ads:3.7.1'
+    implementation 'com.unity3d.ads-mediation:bidmachine-adapter:5.8.0'
+    implementation 'io.bidmachine:ads:3.8.0'
     {{/levelplay.bidmachine_android}}
 
     {{#levelplay.bigo_android}}
     // BIGO Ads
-    implementation 'com.unity3d.ads-mediation:bigo-adapter:5.10.0'
-    implementation 'com.bigossp:bigo-ads:5.10.1'
+    implementation 'com.unity3d.ads-mediation:bigo-adapter:5.13.0'
+    implementation 'com.bigossp:bigo-ads:6.1.0'
     {{/levelplay.bigo_android}}
 
     {{#levelplay.chartboost_android}}
     // Chartboost
-    implementation 'com.unity3d.ads-mediation:chartboost-adapter:5.8.0'
-    implementation 'com.chartboost:chartboost-sdk:9.13.0'
+    implementation 'com.unity3d.ads-mediation:chartboost-adapter:5.10.0'
+    implementation 'com.chartboost:chartboost-sdk:9.14.1'
     {{/levelplay.chartboost_android}}
 
     {{#levelplay.dt_exchange_android}}
     // DT Exchange
-    implementation 'com.unity3d.ads-mediation:fyber-adapter:5.9.0'
-    implementation 'com.fyber:marketplace-sdk:8.4.6'
+    implementation 'com.unity3d.ads-mediation:fyber-adapter:5.10.0'
+    implementation 'com.fyber:marketplace-sdk:8.4.7'
     {{/levelplay.dt_exchange_android}}
 
     {{#levelplay.admob_android}}
     // Google AdMob and Ad Manager
-    implementation 'com.unity3d.ads-mediation:admob-adapter:5.12.0'
-    implementation 'com.google.android.libraries.ads.mobile.sdk:ads-mobile-sdk:1.3.0'
+    implementation 'com.unity3d.ads-mediation:admob-adapter:5.16.0'
+    implementation 'com.google.android.libraries.ads.mobile.sdk:ads-mobile-sdk:1.5.0'
     {{/levelplay.admob_android}}
 
     {{#levelplay.hyprmx_android}}
     // HyprMX
-    implementation 'com.unity3d.ads-mediation:hyprmx-adapter:5.3.0'
-    implementation 'com.hyprmx.android:HyprMX-SDK:6.4.6'
+    implementation 'com.unity3d.ads-mediation:hyprmx-adapter:5.4.0'
+    implementation 'com.hyprmx.android:HyprMX-SDK:6.4.7'
     {{/levelplay.hyprmx_android}}
 
     {{#levelplay.inmobi_android}}
     // InMobi
-    implementation 'com.unity3d.ads-mediation:inmobi-adapter:5.8.0'
-    implementation 'com.inmobi.monetization:inmobi-ads-kotlin:11.4.0'
+    implementation 'com.unity3d.ads-mediation:inmobi-adapter:5.10.0'
+    implementation 'com.inmobi.monetization:inmobi-ads-kotlin:11.5.0'
     {{/levelplay.inmobi_android}}
 
     {{#levelplay.liftoff_android}}
     // Liftoff Monetize
-    implementation 'com.unity3d.ads-mediation:vungle-adapter:5.12.0'
-    implementation 'com.vungle:vungle-ads:7.7.6'
+    implementation 'com.unity3d.ads-mediation:vungle-adapter:5.16.0'
+    implementation 'com.vungle:vungle-ads:7.7.9'
     {{/levelplay.liftoff_android}}
 
     {{#levelplay.line_android}}
     // LY Ads Network
-    implementation 'com.unity3d.ads-mediation:line-adapter:5.3.0'
+    implementation 'com.unity3d.ads-mediation:line-adapter:5.4.0'
     implementation 'com.linecorp.adsnetwork:fivead:3.1.1'
     {{/levelplay.line_android}}
 
     {{#levelplay.meta_android}}
     // Meta Audience Network
-    implementation 'com.unity3d.ads-mediation:facebook-adapter:5.4.0'
+    implementation 'com.unity3d.ads-mediation:facebook-adapter:5.5.0'
     implementation 'com.facebook.android:audience-network-sdk:6.22.0'
     {{/levelplay.meta_android}}
 
     {{#levelplay.mintegral_android}}
     // Mintegral
-    implementation 'com.unity3d.ads-mediation:mintegral-adapter:5.18.0'
-    implementation 'com.mbridge.msdk.oversea:mbridge_android_sdk:16.9.91'
+    implementation 'com.unity3d.ads-mediation:mintegral-adapter:5.20.0'
+    implementation 'com.mbridge.msdk.oversea:mbridge_android_sdk:17.1.81'
     implementation 'androidx.recyclerview:recyclerview:1.4.0'
     {{/levelplay.mintegral_android}}
 
     {{#levelplay.mobilefuse_android}}
     // MobileFuse
-    implementation 'com.unity3d.ads-mediation:mobilefuse-adapter:5.3.0'
-    implementation 'com.mobilefuse.sdk:mobilefuse-sdk-core:1.11.0'
+    implementation 'com.unity3d.ads-mediation:mobilefuse-adapter:5.4.0'
+    implementation 'com.mobilefuse.sdk:mobilefuse-sdk-core:1.12.0'
     {{/levelplay.mobilefuse_android}}
 
     {{#levelplay.moloco_android}}
     // Moloco
-    implementation 'com.unity3d.ads-mediation:moloco-adapter:5.14.0'
-    implementation 'com.moloco.sdk:moloco-sdk:4.10.1'
+    implementation 'com.unity3d.ads-mediation:moloco-adapter:5.19.0'
+    implementation 'com.moloco.sdk:moloco-sdk:4.13.0'
     {{/levelplay.moloco_android}}
 
     {{#levelplay.ogury_android}}
     // Ogury
-    implementation 'com.unity3d.ads-mediation:ogury-adapter:5.4.0'
-    implementation 'co.ogury:ogury-sdk:6.2.2'
+    implementation 'com.unity3d.ads-mediation:ogury-adapter:5.5.0'
+    implementation 'co.ogury:ogury-sdk:6.3.1'
     {{/levelplay.ogury_android}}
 
     {{#levelplay.pangle_android}}
     // Pangle
-    implementation 'com.unity3d.ads-mediation:pangle-adapter:5.21.0'
-    implementation 'com.pangle.global:pag-sdk:8.1.0.5'
+    implementation 'com.unity3d.ads-mediation:pangle-adapter:5.24.0'
+    implementation 'com.pangle.global:pag-sdk:8.3.0.4'
     {{/levelplay.pangle_android}}
 
     {{#levelplay.pubmatic_android}}
     // PubMatic
-    implementation 'com.unity3d.ads-mediation:pubmatic-adapter:5.8.0'
-    implementation 'com.pubmatic.sdk:openwrap:5.2.0'
+    implementation 'com.unity3d.ads-mediation:pubmatic-adapter:5.11.0'
+    implementation 'com.pubmatic.sdk:openwrap:5.4.1'
     {{/levelplay.pubmatic_android}}
 
     {{#levelplay.smaato_android}}
     // Smaato
-    implementation 'com.unity3d.ads-mediation:smaato-adapter:5.4.0'
-    implementation 'com.smaato.android.sdk:smaato-sdk-banner:23.2.0'
-    implementation 'com.smaato.android.sdk:smaato-sdk-in-app-bidding:23.2.0'
-    implementation 'com.smaato.android.sdk:smaato-sdk-interstitial:23.2.0'
-    implementation 'com.smaato.android.sdk:smaato-sdk-rewarded-ads:23.2.0'
+    implementation 'com.unity3d.ads-mediation:smaato-adapter:5.6.0'
+    implementation 'com.smaato.android.sdk:smaato-sdk-banner:23.2.2'
+    implementation 'com.smaato.android.sdk:smaato-sdk-in-app-bidding:23.2.2'
+    implementation 'com.smaato.android.sdk:smaato-sdk-interstitial:23.2.2'
+    implementation 'com.smaato.android.sdk:smaato-sdk-rewarded-ads:23.2.2'
     {{/levelplay.smaato_android}}
 
     {{#levelplay.superawesome_android}}
     // SuperAwesome
-    implementation 'com.unity3d.ads-mediation:superawesome-adapter:5.4.0'
-    implementation 'tv.superawesome.sdk.publisher:superawesome:10.3.1'
+    implementation 'com.unity3d.ads-mediation:superawesome-adapter:5.6.0'
+    implementation 'tv.superawesome.sdk.publisher:superawesome:10.3.2'
     {{/levelplay.superawesome_android}}
 
     {{#levelplay.unity_ads_android}}
     // Unity Ads
-    implementation 'com.unity3d.ads-mediation:unityads-adapter:5.11.0'
-    implementation 'com.unity3d.ads:unity-ads:4.19.0'
+    implementation 'com.unity3d.ads-mediation:unityads-adapter:5.14.0'
+    implementation 'com.unity3d.ads:unity-ads:4.21.0'
     {{/levelplay.unity_ads_android}}
 
     {{#levelplay.verve_android}}
     // Verve
-    implementation 'com.unity3d.ads-mediation:verve-adapter:5.6.0'
-    implementation 'net.pubnative:hybid.sdk:3.9.0'
+    implementation 'com.unity3d.ads-mediation:verve-adapter:5.8.0'
+    implementation 'net.pubnative:hybid.sdk:3.9.2'
     {{/levelplay.verve_android}}
 
     {{#levelplay.vk_android}}
     // VK Ad Network
-    implementation 'com.unity3d.ads-mediation:mytarget-adapter:5.5.0'
-    implementation 'com.my.target:mytarget-sdk:5.47.1'
+    implementation 'com.unity3d.ads-mediation:mytarget-adapter:5.6.0'
+    implementation 'com.my.target:mytarget-sdk:5.51.2'
     {{/levelplay.vk_android}}
 
     {{#levelplay.yandex_android}}
     // Yandex Ads
-    implementation 'com.unity3d.ads-mediation:yandex-adapter:5.11.0'
-    implementation 'com.yandex.android:mobileads:8.2.0'
+    implementation 'com.unity3d.ads-mediation:yandex-adapter:5.15.0'
+    implementation 'com.yandex.android:mobileads:8.5.0'
     {{/levelplay.yandex_android}}
 
     {{#levelplay.yso_android}}
     // YSO Network
-    implementation 'com.unity3d.ads-mediation:yso-adapter:5.5.0'
+    implementation 'com.unity3d.ads-mediation:yso-adapter:5.6.0'
     implementation 'com.ysocorp:ysonetwork:1.3.8'
     {{/levelplay.yso_android}}
 }

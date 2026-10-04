@@ -23,8 +23,8 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 EXTENSION = ROOT / "extension-levelplay"
 
-ANDROID_SDK_VERSION = "9.5.0"
-IOS_SDK_VERSION = "9.5.0.0"
+ANDROID_SDK_VERSION = "9.6.1"
+IOS_SDK_VERSION = "9.6.1.0"
 
 OLD_NAME_RE = re.compile(r"iron[\s_.-]*source", re.IGNORECASE)
 
