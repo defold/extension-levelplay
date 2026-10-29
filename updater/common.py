@@ -52,7 +52,7 @@ ANDROID_KEYS = (
     "yso",
 )
 
-IOS_KEYS = ANDROID_KEYS + ("tencent",)
+IOS_KEYS = ANDROID_KEYS
 
 
 class UpdaterError(RuntimeError):

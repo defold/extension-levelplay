@@ -21,7 +21,7 @@
       ]
     },
     "ios": {
-      "version": "9.6.1.0",
+      "version": "9.6.1",
       "minimum_version": "15.0",
       "ad_quality_version": "9.10.0",
       "skadnetwork_note": "These are the primary IDs in Unity's LevelPlay manual. Additional partner IDs linked by Unity are app- and network-specific and must be added separately.",
@@ -40,7 +40,7 @@
         ]
       },
       "ios": {
-        "adapter_version": "5.9.0.0",
+        "adapter_version": "5.9.0",
         "supported_sdk_version": "13.6.4",
         "skadnetwork_ids": [
           "ludvb6z3bs.skadnetwork"
@@ -57,7 +57,7 @@
         ]
       },
       "ios": {
-        "adapter_version": "5.12.0.0",
+        "adapter_version": "5.12.0",
         "supported_sdk_version": "5.6.6",
         "skadnetwork_ids": [
           "p78axxw29g.skadnetwork"
@@ -76,7 +76,7 @@
         ]
       },
       "ios": {
-        "adapter_version": "5.9.0.0",
+        "adapter_version": "5.9.0",
         "supported_sdk_version": "3.8.1",
         "skadnetwork_ids": [
           "wg4vff78zm.skadnetwork"
@@ -92,7 +92,7 @@
         ]
       },
       "ios": {
-        "adapter_version": "5.12.0.0",
+        "adapter_version": "5.12.0",
         "supported_sdk_version": "6.1.0",
         "skadnetwork_ids": []
       }
@@ -109,7 +109,7 @@
         ]
       },
       "ios": {
-        "adapter_version": "5.9.0.0",
+        "adapter_version": "5.9.0",
         "supported_sdk_version": "9.14.2",
         "skadnetwork_ids": [
           "f38h382jlk.skadnetwork"
@@ -125,7 +125,7 @@
         ]
       },
       "ios": {
-        "adapter_version": "5.13.0.0",
+        "adapter_version": "5.13.0",
         "supported_sdk_version": "8.5.0",
         "skadnetwork_ids": [
           "9g2aggbj52.skadnetwork"
@@ -144,7 +144,7 @@
         ]
       },
       "ios": {
-        "adapter_version": "5.17.0.0",
+        "adapter_version": "5.17.0",
         "supported_sdk_version": "13.11.0",
         "skadnetwork_ids": [
           "cstr6suwn9.skadnetwork"
@@ -160,7 +160,7 @@
         ]
       },
       "ios": {
-        "adapter_version": "5.5.0.0",
+        "adapter_version": "5.5.0",
         "supported_sdk_version": "6.4.7",
         "skadnetwork_ids": [
           "nu4557a4je.skadnetwork"
@@ -176,7 +176,7 @@
         ]
       },
       "ios": {
-        "adapter_version": "5.10.0.0",
+        "adapter_version": "5.10.0",
         "supported_sdk_version": "11.5.0",
         "skadnetwork_ids": [
           "wzmmz9fp6w.skadnetwork"
@@ -192,7 +192,7 @@
         ]
       },
       "ios": {
-        "adapter_version": "5.16.0.0",
+        "adapter_version": "5.16.0",
         "supported_sdk_version": "7.7.8",
         "skadnetwork_ids": [
           "gta9lk7p23.skadnetwork"
@@ -208,7 +208,7 @@
         ]
       },
       "ios": {
-        "adapter_version": "5.8.0.0",
+        "adapter_version": "5.8.0",
         "supported_sdk_version": "3.1.1",
         "skadnetwork_ids": [
           "vutu7akeur.skadnetwork"
@@ -224,7 +224,7 @@
         ]
       },
       "ios": {
-        "adapter_version": "5.5.0.0",
+        "adapter_version": "5.5.0",
         "supported_sdk_version": "6.22.0",
         "skadnetwork_ids": [
           "v9wttpbfk9.skadnetwork",
@@ -246,7 +246,7 @@
         ]
       },
       "ios": {
-        "adapter_version": "5.21.0.0",
+        "adapter_version": "5.21.0",
         "supported_sdk_version": "8.1.7",
         "skadnetwork_ids": [
           "kbd757ywx3.skadnetwork"
@@ -262,7 +262,7 @@
         ]
       },
       "ios": {
-        "adapter_version": "5.5.0.0",
+        "adapter_version": "5.5.0",
         "supported_sdk_version": "1.12.0",
         "skadnetwork_ids": []
       }
@@ -276,8 +276,8 @@
         ]
       },
       "ios": {
-        "adapter_version": "5.19.0.0",
-        "supported_sdk_version": "4.11.0",
+        "adapter_version": "5.20.0",
+        "supported_sdk_version": "4.11.1",
         "skadnetwork_ids": []
       }
     },
@@ -293,7 +293,7 @@
         ]
       },
       "ios": {
-        "adapter_version": "5.9.0.0",
+        "adapter_version": "5.9.0",
         "supported_sdk_version": "5.3.1",
         "skadnetwork_ids": []
       }
@@ -310,7 +310,7 @@
         ]
       },
       "ios": {
-        "adapter_version": "5.36.0.0",
+        "adapter_version": "5.36.0",
         "supported_sdk_version": "8.3.0.8",
         "skadnetwork_ids": [
           "22mmun2rn5.skadnetwork",
@@ -330,7 +330,7 @@
         ]
       },
       "ios": {
-        "adapter_version": "5.11.0.0",
+        "adapter_version": "5.11.0",
         "supported_sdk_version": "5.4.1",
         "skadnetwork_ids": []
       }
@@ -350,7 +350,7 @@
         ]
       },
       "ios": {
-        "adapter_version": "5.6.0.0",
+        "adapter_version": "5.6.0",
         "supported_sdk_version": "23.2.2",
         "skadnetwork_ids": [
           "cdkw7geqsh.skadnetwork"
@@ -369,8 +369,8 @@
         ]
       },
       "ios": {
-        "adapter_version": "5.1.0.0",
-        "supported_sdk_version": "9.4.0",
+        "adapter_version": "5.2.0",
+        "supported_sdk_version": "10.2.3",
         "skadnetwork_ids": []
       }
     },
@@ -383,7 +383,7 @@
         ]
       },
       "ios": {
-        "adapter_version": "5.13.0.0",
+        "adapter_version": "5.13.0",
         "supported_sdk_version": "4.21.0",
         "skadnetwork_ids": [
           "4dzt52r2t5.skadnetwork"
@@ -402,7 +402,7 @@
         ]
       },
       "ios": {
-        "adapter_version": "5.5.0.0",
+        "adapter_version": "5.5.0",
         "supported_sdk_version": "3.8.1",
         "skadnetwork_ids": []
       }
@@ -416,7 +416,7 @@
         ]
       },
       "ios": {
-        "adapter_version": "5.13.0.0",
+        "adapter_version": "5.13.0",
         "supported_sdk_version": "5.46.0",
         "skadnetwork_ids": [
           "n9x2a789qt.skadnetwork",
@@ -433,7 +433,7 @@
         ]
       },
       "ios": {
-        "adapter_version": "5.16.0.0",
+        "adapter_version": "5.16.0",
         "supported_sdk_version": "8.6.0",
         "skadnetwork_ids": []
       }
@@ -450,19 +450,11 @@
         ]
       },
       "ios": {
-        "adapter_version": "5.2.0.0",
+        "adapter_version": "5.2.0",
         "supported_sdk_version": "1.2.1",
         "skadnetwork_ids": [
           "pt89h2hlb7.skadnetwork"
         ]
-      }
-    },
-    "tencent": {
-      "display_name": "Tencent Ads",
-      "ios": {
-        "adapter_version": "5.7.0.0",
-        "supported_sdk_version": "4.16.05",
-        "skadnetwork_ids": []
       }
     }
   }

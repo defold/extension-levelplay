@@ -5,6 +5,9 @@
 from __future__ import annotations
 
 import argparse
+import json
+import re
+import subprocess
 import sys
 from pathlib import Path
 from typing import Any, Sequence
@@ -13,46 +16,46 @@ from common import (
     DEFAULT_EXTENSION_DIR,
     IOS_KEYS,
     UpdaterError,
-    cocoa_latest_spec,
     load_catalog,
     write_or_check,
 )
 
 
-DEFAULT_PODFILE = DEFAULT_EXTENSION_DIR / "manifests/ios/Podfile"
+DEFAULT_SWIFT_PACKAGES = DEFAULT_EXTENSION_DIR / "manifests/ios/SwiftPackages.json"
 DEFAULT_INFO_PLIST = DEFAULT_EXTENSION_DIR / "manifests/ios/Info.plist"
 
-# These are the current official CocoaPods product identifiers. CocoaPods
-# identifiers cannot be replaced by the public LevelPlay product name.
-LEVELPLAY_SDK_POD = "IronSourceSDK"
-AD_QUALITY_POD = "IronSourceAdQualitySDK"
-ADAPTER_PODS = {
-    "applovin": "IronSourceAppLovinAdapter",
-    "aps": "IronSourceAPSAdapter",
-    "bidmachine": "IronSourceBidMachineAdapter",
-    "bigo": "IronSourceBigoAdapter",
-    "chartboost": "IronSourceChartboostAdapter",
-    "dt_exchange": "IronSourceFyberAdapter",
-    "admob": "IronSourceAdMobAdapter",
-    "hyprmx": "IronSourceHyprMXAdapter",
-    "inmobi": "IronSourceInMobiAdapter",
-    "liftoff": "IronSourceVungleAdapter",
-    "line": "IronSourceLineAdapter",
-    "meta": "IronSourceFacebookAdapter",
-    "mintegral": "IronSourceMintegralAdapter",
-    "mobilefuse": "IronSourceMobileFuseAdapter",
-    "moloco": "IronSourceMolocoAdapter",
-    "ogury": "IronSourceOguryAdapter",
-    "pangle": "IronSourcePangleAdapter",
-    "pubmatic": "LevelPlayPubMaticAdapter",
-    "smaato": "IronSourceSmaatoAdapter",
-    "superawesome": "IronSourceSuperAwesomeAdapter",
-    "unity_ads": "IronSourceUnityAdsAdapter",
-    "verve": "IronSourceVerveAdapter",
-    "vk": "IronSourceMyTargetAdapter",
-    "yandex": "IronSourceYandexAdapter",
-    "yso": "IronSourceYSOAdapter",
-    "tencent": "IronSourceTencentAdapter",
+# These are the current official Swift package repositories and products.
+# Their repository and product identifiers cannot be replaced by the public
+# LevelPlay product name.
+PACKAGE_URL = "https://github.com/ironsource-mobile/{repo}"
+LEVELPLAY_SDK_PACKAGE = ("LevelPlay-Swift-Package", "UnityMediationSDK")
+AD_QUALITY_PACKAGE = ("Unity-Ad-Quality-Swift-Package", "AdQuality")
+ADAPTER_PACKAGES = {
+    "applovin": ("LevelPlay-AppLovin-Adapter-Swift-Package", "AppLovinAdapter"),
+    "aps": ("LevelPlay-APS-Adapter-Swift-Package", "APSAdapter"),
+    "bidmachine": ("LevelPlay-BidMachine-Adapter-Swift-Package", "BidMachineAdapter"),
+    "bigo": ("LevelPlay-Bigo-Adapter-Swift-Package", "BigoAdapter"),
+    "chartboost": ("LevelPlay-Chartboost-Adapter-Swift-Package", "ChartboostAdapter"),
+    "dt_exchange": ("LevelPlay-Fyber-Adapter-Swift-Package", "FyberAdapter"),
+    "admob": ("LevelPlay-AdMob-Adapter-Swift-Package", "AdMobAdapter"),
+    "hyprmx": ("LevelPlay-HyprMX-Adapter-Swift-Package", "HyprMXAdapter"),
+    "inmobi": ("LevelPlay-InMobi-Adapter-Swift-Package", "InMobiAdapter"),
+    "liftoff": ("LevelPlay-Vungle-Adapter-Swift-Package", "VungleAdapter"),
+    "line": ("LevelPlay-Line-Adapter-Swift-Package", "LineAdapter"),
+    "meta": ("LevelPlay-Facebook-Adapter-Swift-Package", "FacebookAdapter"),
+    "mintegral": ("LevelPlay-Mintegral-Adapter-Swift-Package", "MintegralAdapter"),
+    "mobilefuse": ("LevelPlay-MobileFuse-Adapter-Swift-Package", "MobileFuseAdapter"),
+    "moloco": ("LevelPlay-Moloco-Adapter-Swift-Package", "MolocoAdapter"),
+    "ogury": ("LevelPlay-Ogury-Adapter-Swift-Package", "OguryAdapter"),
+    "pangle": ("LevelPlay-Pangle-Adapter-Swift-Package", "PangleAdapter"),
+    "pubmatic": ("LevelPlay-PubMatic-Adapter-Swift-Package", "PubMaticAdapter"),
+    "smaato": ("LevelPlay-Smaato-Adapter-Swift-Package", "SmaatoAdapter"),
+    "superawesome": ("LevelPlay-SuperAwesome-Adapter-Swift-Package", "SuperAwesomeAdapter"),
+    "unity_ads": ("LevelPlay-UnityAds-Adapter-Swift-Package", "UnityAdsAdapter"),
+    "verve": ("LevelPlay-Verve-Adapter-Swift-Package", "VerveAdapter"),
+    "vk": ("LevelPlay-MyTarget-Adapter-Swift-Package", "MyTargetAdapter"),
+    "yandex": ("LevelPlay-Yandex-Adapter-Swift-Package", "YandexAdapter"),
+    "yso": ("LevelPlay-YSO-Adapter-Swift-Package", "YSOAdapter"),
 }
 
 
@@ -60,35 +63,44 @@ def condition(key: str) -> str:
     return f"levelplay.{key}_ios"
 
 
-def render_podfile(catalog: dict[str, Any]) -> str:
-    minimum_version = catalog["levelplay"]["ios"]["minimum_version"]
-    sdk_version = catalog["levelplay"]["ios"]["version"]
+def package_entry(package: tuple[str, str], version: str) -> str:
+    repo, product = package
+    return json.dumps(
+        {
+            "url": PACKAGE_URL.format(repo=repo),
+            "version": version,
+            "products": [product],
+        }
+    )
+
+
+def render_swift_packages(catalog: dict[str, Any]) -> str:
+    # Every adapter entry starts with a comma so that the JSON stays valid for
+    # any combination of enabled adapters.
+    ios = catalog["levelplay"]["ios"]
     lines = [
-        "# Generated by updater/ios.py from updater/networks.json.",
-        "# Run `python3 updater/ios.py check` in CI.",
-        f"platform :ios, '{minimum_version}'",
-        "",
-        f"pod '{LEVELPLAY_SDK_POD}', '{sdk_version}'",
-        (
-            f"pod '{AD_QUALITY_POD}', "
-            f"'{catalog['levelplay']['ios']['ad_quality_version']}'"
-        ),
+        "{",
+        '  "platform": "ios",',
+        f'  "minVersion": "{ios["minimum_version"]}",',
+        # The static SPM wrapper receives the LevelPlay SDK's binary libraries
+        # twice and fails to link; Extender links this graph only as a dylib.
+        '  "wrapperType": "dynamic",',
+        '  "packages": [',
+        f"    {package_entry(LEVELPLAY_SDK_PACKAGE, ios['version'])},",
+        f"    {package_entry(AD_QUALITY_PACKAGE, ios['ad_quality_version'])}",
     ]
 
     for key in IOS_KEYS:
-        network = catalog["networks"][key]
-        version = network["ios"]["adapter_version"]
+        version = catalog["networks"][key]["ios"]["adapter_version"]
         lines.extend(
             (
-                "",
                 f"{{{{#{condition(key)}}}}}",
-                f"# {network['display_name']}",
-                f"pod '{ADAPTER_PODS[key]}', '{version}'",
+                f"    ,{package_entry(ADAPTER_PACKAGES[key], version)}",
                 f"{{{{/{condition(key)}}}}}",
             )
         )
 
-    lines.append("")
+    lines.extend(("  ]", "}", ""))
     return "\n".join(lines)
 
 
@@ -164,25 +176,46 @@ def render_info_plist(catalog: dict[str, Any]) -> str:
 def generate_or_check(args: argparse.Namespace, check: bool) -> int:
     catalog = load_catalog()
     results = (
-        write_or_check(args.podfile, render_podfile(catalog), check),
+        write_or_check(args.swift_packages, render_swift_packages(catalog), check),
         write_or_check(args.info_plist, render_info_plist(catalog), check),
     )
     return 0 if all(results) else 1
 
 
-def validate_pod(
-    pod: str, pinned_version: str, timeout: float
+def package_tags(repo: str, timeout: float) -> list[str]:
+    try:
+        result = subprocess.run(
+            ["git", "ls-remote", "--tags", "--refs", PACKAGE_URL.format(repo=repo)],
+            capture_output=True,
+            text=True,
+            timeout=timeout,
+            check=True,
+        )
+    except (OSError, subprocess.SubprocessError) as error:
+        raise UpdaterError(f"Cannot list tags of {repo}: {error}") from error
+    tags = [line.rsplit("refs/tags/", 1)[-1] for line in result.stdout.splitlines()]
+    return [tag for tag in tags if re.fullmatch(r"\d+(?:\.\d+)*", tag)]
+
+
+def validate_package(
+    package: tuple[str, str], pinned_version: str, timeout: float
 ) -> bool:
-    spec = cocoa_latest_spec(pod, timeout)
-    latest_version = str(spec.get("version", ""))
+    repo = package[0]
+    tags = package_tags(repo, timeout)
+    latest_version = max(
+        tags, key=lambda tag: tuple(int(part) for part in tag.split(".")), default=""
+    )
+    if pinned_version not in tags:
+        print(f"missing: {repo} has no tag {pinned_version}", file=sys.stderr)
+        return False
     if latest_version != pinned_version:
         print(
-            f"outdated: {pod} {pinned_version} "
-            f"(CocoaPods trunk latest is {latest_version or 'unknown'})",
+            f"outdated: {repo} {pinned_version} "
+            f"(latest tag is {latest_version or 'unknown'})",
             file=sys.stderr,
         )
         return False
-    print(f"verified: {pod}:{pinned_version}")
+    print(f"verified: {repo}@{pinned_version}")
     return True
 
 
@@ -191,19 +224,19 @@ def refresh(args: argparse.Namespace) -> int:
     source = catalog["sources"]["ios_mediation_matrix"]
     print(f"Unity compatibility matrix: {source}")
 
-    ok = validate_pod(
-        LEVELPLAY_SDK_POD,
+    ok = validate_package(
+        LEVELPLAY_SDK_PACKAGE,
         catalog["levelplay"]["ios"]["version"],
         args.timeout,
     )
-    ok = validate_pod(
-        AD_QUALITY_POD,
+    ok = validate_package(
+        AD_QUALITY_PACKAGE,
         catalog["levelplay"]["ios"]["ad_quality_version"],
         args.timeout,
     ) and ok
     for key in IOS_KEYS:
         version = catalog["networks"][key]["ios"]["adapter_version"]
-        ok = validate_pod(ADAPTER_PODS[key], version, args.timeout) and ok
+        ok = validate_package(ADAPTER_PACKAGES[key], version, args.timeout) and ok
 
     if ok:
         print("iOS catalog metadata is valid.")
@@ -218,10 +251,10 @@ def refresh(args: argparse.Namespace) -> int:
 
 def add_output_arguments(parser: argparse.ArgumentParser) -> None:
     parser.add_argument(
-        "--podfile",
+        "--swift-packages",
         type=Path,
-        default=DEFAULT_PODFILE,
-        help=f"Podfile output (default: {DEFAULT_PODFILE})",
+        default=DEFAULT_SWIFT_PACKAGES,
+        help=f"SwiftPackages.json output (default: {DEFAULT_SWIFT_PACKAGES})",
     )
     parser.add_argument(
         "--info-plist",
@@ -253,7 +286,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     refresh_parser = commands.add_parser(
         "refresh",
-        help="validate pinned SDK and adapters against live CocoaPods metadata",
+        help="validate pinned SDK and adapters against live Swift package tags",
     )
     refresh_parser.add_argument(
         "--timeout",

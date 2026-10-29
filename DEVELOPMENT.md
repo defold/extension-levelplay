@@ -32,11 +32,11 @@ Use Unity documentation and the SDK headers/artifacts as the source of truth. A 
 4. Inspect the generated dependency changes. Confirm every enabled adapter is compatible with the selected core SDK.
 5. Update `version.default` in `extension-levelplay/ext.properties`.
 6. Confirm Android resolves all mediation artifacts from Maven Central. Add a network-owned repository only when that network's current official integration guide requires it.
-7. Confirm iOS pods resolve from the CocoaPods trunk.
+7. Confirm every iOS Swift package version is a published tag of its repository.
 8. Review current platform setup requirements, including Android manifest entries and iOS privacy, ATS, and SKAdNetwork configuration.
 9. Run the repository scans, API checks, and both Bob builds described below.
 
-The official iOS distribution still contains historical vendor naming in some upstream Pod, framework, header, and class identifiers. Keep those identifiers only where the current vendor artifact requires them; never expose them through the Lua namespace, public API, sample, or extension-owned configuration.
+The official iOS distribution still contains historical vendor naming in some upstream Swift package, framework, header, and class identifiers. Keep those identifiers only where the current vendor artifact requires them; never expose them through the Lua namespace, public API, sample, or extension-owned configuration.
 
 ## Adding or removing an adapter
 

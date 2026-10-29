@@ -1,0 +1,84 @@
+{
+  "platform": "ios",
+  "minVersion": "15.0",
+  "wrapperType": "dynamic",
+  "packages": [
+    {"url": "https://github.com/ironsource-mobile/LevelPlay-Swift-Package", "version": "9.6.1", "products": ["UnityMediationSDK"]},
+    {"url": "https://github.com/ironsource-mobile/Unity-Ad-Quality-Swift-Package", "version": "9.10.0", "products": ["AdQuality"]}
+{{#levelplay.applovin_ios}}
+    ,{"url": "https://github.com/ironsource-mobile/LevelPlay-AppLovin-Adapter-Swift-Package", "version": "5.9.0", "products": ["AppLovinAdapter"]}
+{{/levelplay.applovin_ios}}
+{{#levelplay.aps_ios}}
+    ,{"url": "https://github.com/ironsource-mobile/LevelPlay-APS-Adapter-Swift-Package", "version": "5.12.0", "products": ["APSAdapter"]}
+{{/levelplay.aps_ios}}
+{{#levelplay.bidmachine_ios}}
+    ,{"url": "https://github.com/ironsource-mobile/LevelPlay-BidMachine-Adapter-Swift-Package", "version": "5.9.0", "products": ["BidMachineAdapter"]}
+{{/levelplay.bidmachine_ios}}
+{{#levelplay.bigo_ios}}
+    ,{"url": "https://github.com/ironsource-mobile/LevelPlay-Bigo-Adapter-Swift-Package", "version": "5.12.0", "products": ["BigoAdapter"]}
+{{/levelplay.bigo_ios}}
+{{#levelplay.chartboost_ios}}
+    ,{"url": "https://github.com/ironsource-mobile/LevelPlay-Chartboost-Adapter-Swift-Package", "version": "5.9.0", "products": ["ChartboostAdapter"]}
+{{/levelplay.chartboost_ios}}
+{{#levelplay.dt_exchange_ios}}
+    ,{"url": "https://github.com/ironsource-mobile/LevelPlay-Fyber-Adapter-Swift-Package", "version": "5.13.0", "products": ["FyberAdapter"]}
+{{/levelplay.dt_exchange_ios}}
+{{#levelplay.admob_ios}}
+    ,{"url": "https://github.com/ironsource-mobile/LevelPlay-AdMob-Adapter-Swift-Package", "version": "5.17.0", "products": ["AdMobAdapter"]}
+{{/levelplay.admob_ios}}
+{{#levelplay.hyprmx_ios}}
+    ,{"url": "https://github.com/ironsource-mobile/LevelPlay-HyprMX-Adapter-Swift-Package", "version": "5.5.0", "products": ["HyprMXAdapter"]}
+{{/levelplay.hyprmx_ios}}
+{{#levelplay.inmobi_ios}}
+    ,{"url": "https://github.com/ironsource-mobile/LevelPlay-InMobi-Adapter-Swift-Package", "version": "5.10.0", "products": ["InMobiAdapter"]}
+{{/levelplay.inmobi_ios}}
+{{#levelplay.liftoff_ios}}
+    ,{"url": "https://github.com/ironsource-mobile/LevelPlay-Vungle-Adapter-Swift-Package", "version": "5.16.0", "products": ["VungleAdapter"]}
+{{/levelplay.liftoff_ios}}
+{{#levelplay.line_ios}}
+    ,{"url": "https://github.com/ironsource-mobile/LevelPlay-Line-Adapter-Swift-Package", "version": "5.8.0", "products": ["LineAdapter"]}
+{{/levelplay.line_ios}}
+{{#levelplay.meta_ios}}
+    ,{"url": "https://github.com/ironsource-mobile/LevelPlay-Facebook-Adapter-Swift-Package", "version": "5.5.0", "products": ["FacebookAdapter"]}
+{{/levelplay.meta_ios}}
+{{#levelplay.mintegral_ios}}
+    ,{"url": "https://github.com/ironsource-mobile/LevelPlay-Mintegral-Adapter-Swift-Package", "version": "5.21.0", "products": ["MintegralAdapter"]}
+{{/levelplay.mintegral_ios}}
+{{#levelplay.mobilefuse_ios}}
+    ,{"url": "https://github.com/ironsource-mobile/LevelPlay-MobileFuse-Adapter-Swift-Package", "version": "5.5.0", "products": ["MobileFuseAdapter"]}
+{{/levelplay.mobilefuse_ios}}
+{{#levelplay.moloco_ios}}
+    ,{"url": "https://github.com/ironsource-mobile/LevelPlay-Moloco-Adapter-Swift-Package", "version": "5.20.0", "products": ["MolocoAdapter"]}
+{{/levelplay.moloco_ios}}
+{{#levelplay.ogury_ios}}
+    ,{"url": "https://github.com/ironsource-mobile/LevelPlay-Ogury-Adapter-Swift-Package", "version": "5.9.0", "products": ["OguryAdapter"]}
+{{/levelplay.ogury_ios}}
+{{#levelplay.pangle_ios}}
+    ,{"url": "https://github.com/ironsource-mobile/LevelPlay-Pangle-Adapter-Swift-Package", "version": "5.36.0", "products": ["PangleAdapter"]}
+{{/levelplay.pangle_ios}}
+{{#levelplay.pubmatic_ios}}
+    ,{"url": "https://github.com/ironsource-mobile/LevelPlay-PubMatic-Adapter-Swift-Package", "version": "5.11.0", "products": ["PubMaticAdapter"]}
+{{/levelplay.pubmatic_ios}}
+{{#levelplay.smaato_ios}}
+    ,{"url": "https://github.com/ironsource-mobile/LevelPlay-Smaato-Adapter-Swift-Package", "version": "5.6.0", "products": ["SmaatoAdapter"]}
+{{/levelplay.smaato_ios}}
+{{#levelplay.superawesome_ios}}
+    ,{"url": "https://github.com/ironsource-mobile/LevelPlay-SuperAwesome-Adapter-Swift-Package", "version": "5.2.0", "products": ["SuperAwesomeAdapter"]}
+{{/levelplay.superawesome_ios}}
+{{#levelplay.unity_ads_ios}}
+    ,{"url": "https://github.com/ironsource-mobile/LevelPlay-UnityAds-Adapter-Swift-Package", "version": "5.13.0", "products": ["UnityAdsAdapter"]}
+{{/levelplay.unity_ads_ios}}
+{{#levelplay.verve_ios}}
+    ,{"url": "https://github.com/ironsource-mobile/LevelPlay-Verve-Adapter-Swift-Package", "version": "5.5.0", "products": ["VerveAdapter"]}
+{{/levelplay.verve_ios}}
+{{#levelplay.vk_ios}}
+    ,{"url": "https://github.com/ironsource-mobile/LevelPlay-MyTarget-Adapter-Swift-Package", "version": "5.13.0", "products": ["MyTargetAdapter"]}
+{{/levelplay.vk_ios}}
+{{#levelplay.yandex_ios}}
+    ,{"url": "https://github.com/ironsource-mobile/LevelPlay-Yandex-Adapter-Swift-Package", "version": "5.16.0", "products": ["YandexAdapter"]}
+{{/levelplay.yandex_ios}}
+{{#levelplay.yso_ios}}
+    ,{"url": "https://github.com/ironsource-mobile/LevelPlay-YSO-Adapter-Swift-Package", "version": "5.2.0", "products": ["YSOAdapter"]}
+{{/levelplay.yso_ios}}
+  ]
+}

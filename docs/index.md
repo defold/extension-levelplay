@@ -41,8 +41,8 @@ ogury, pangle, pubmatic, smaato, superawesome, unity_ads, verve, vk,
 yandex, yso
 ```
 
-Append `_android` or `_ios` to a prefix. Tencent is available as
-`tencent_ios`. When enabling AdMob on iOS, also set `admob_ios_appid`.
+Append `_android` or `_ios` to a prefix. When enabling AdMob on iOS, also set
+`admob_ios_appid`.
 The current Android Google Mobile Ads SDK obtains the app ID from your
 LevelPlay dashboard rather than Android manifest metadata.
 

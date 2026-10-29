@@ -12,7 +12,7 @@
 #import <dispatch/dispatch.h>
 #import <objc/message.h>
 
-// The LevelPlay CocoaPod continues to expose its native SDK through this
+// The LevelPlay Swift package continues to expose its native SDK through this
 // vendor-owned module name.
 #import "IronSource/IronSource.h"
 
