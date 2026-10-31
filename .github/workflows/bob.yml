@@ -8,7 +8,7 @@ jobs:
   verify:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Check generated manifests
         run: |
           python3 -B updater/android.py check
@@ -20,5 +20,5 @@ jobs:
     needs: verify
     uses: defold/github-actions-common/.github/workflows/bob.yml@db89d33df00ba043930ac83b2ab05ca9ca5f3ff8
     with:
-      bob_jar_url: https://github.com/defold/defold/releases/download/1.13.2/bob.jar
+      bob_jar_url: https://github.com/defold/defold/releases/download/1.14.0/bob.jar
       build_server: https://build.defold.com
