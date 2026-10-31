@@ -77,7 +77,7 @@ java -jar bob.jar \
 
 For release verification, use the exact architectures, build server, signing inputs, and bundle format required by the release workflow. Install the Android APK on a device or emulator, launch it, and inspect logcat for native crashes and initialization results. Install and run the iOS build on a valid signed device or simulator target when signing assets are available.
 
-Bob 1.13.2 supports an Apple Silicon iOS simulator build without device signing:
+Bob 1.14.0 supports an Apple Silicon iOS simulator build without device signing:
 
 ```sh
 java -jar bob.jar \
