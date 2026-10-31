@@ -1,7 +1,6 @@
 {
   "platform": "ios",
   "minVersion": "15.0",
-  "wrapperType": "dynamic",
   "packages": [
     {"url": "https://github.com/ironsource-mobile/LevelPlay-Swift-Package", "version": "9.6.1", "products": ["UnityMediationSDK"]},
     {"url": "https://github.com/ironsource-mobile/Unity-Ad-Quality-Swift-Package", "version": "9.10.0", "products": ["AdQuality"]}

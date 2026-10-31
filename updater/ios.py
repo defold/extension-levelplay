@@ -82,9 +82,6 @@ def render_swift_packages(catalog: dict[str, Any]) -> str:
         "{",
         '  "platform": "ios",',
         f'  "minVersion": "{ios["minimum_version"]}",',
-        # The static SPM wrapper receives the LevelPlay SDK's binary libraries
-        # twice and fails to link; Extender links this graph only as a dylib.
-        '  "wrapperType": "dynamic",',
         '  "packages": [',
         f"    {package_entry(LEVELPLAY_SDK_PACKAGE, ios['version'])},",
         f"    {package_entry(AD_QUALITY_PACKAGE, ios['ad_quality_version'])}",
