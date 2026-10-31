@@ -22,3 +22,4 @@ jobs:
     with:
       bob_jar_url: https://github.com/defold/defold/releases/download/1.14.0/bob.jar
       build_server: https://build-stage.defold.com
+      ignored_platforms: '[{"platform": "x86-win32"}]'
