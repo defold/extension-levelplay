@@ -24,15 +24,16 @@ ROOT = Path(__file__).resolve().parents[1]
 EXTENSION = ROOT / "extension-levelplay"
 
 ANDROID_SDK_VERSION = "9.6.1"
-IOS_SDK_VERSION = "9.6.1.0"
+IOS_SDK_VERSION = "9.6.1"
 
 OLD_NAME_RE = re.compile(r"iron[\s_.-]*source", re.IGNORECASE)
 
 # These are the only remaining vendor-owned iOS identifiers accepted in files
-# controlled by this repository. The current Ad Quality pod is pinned
-# explicitly so CocoaPods' upstream version range cannot make builds drift.
+# controlled by this repository. The current Ad Quality package is pinned
+# explicitly so the LevelPlay package's version range cannot make builds drift.
 IOS_VENDOR_IDENTIFIER_RE = re.compile(
     r"\b(?:IronSourceSDK|IronSourceAdQualitySDK|IronSource[A-Za-z0-9]+Adapter)\b"
+    r"|https://github\.com/ironsource-mobile/"
 )
 IOS_HEADER_IMPORT_RE = re.compile(
     r'^#import\s+(?:<IronSource/IronSource\.h>|"IronSource/IronSource\.h")$'
@@ -43,7 +44,7 @@ EXPECTED_SOURCE_PATHS = (
     "extension-levelplay/ext.properties",
     "extension-levelplay/api/levelplay.script_api",
     "extension-levelplay/manifests/android/build.gradle",
-    "extension-levelplay/manifests/ios/Podfile",
+    "extension-levelplay/manifests/ios/SwiftPackages.json",
     "extension-levelplay/src/levelplay.cpp",
     "extension-levelplay/src/levelplay_android.cpp",
     "extension-levelplay/src/levelplay_ios.mm",
@@ -301,7 +302,7 @@ def _remove_allowed_documentation_code_spans(line: str) -> str:
 
 
 def _old_name_allowed(relative: str, line: str) -> bool:
-    if relative == "extension-levelplay/manifests/ios/Podfile":
+    if relative == "extension-levelplay/manifests/ios/SwiftPackages.json":
         return OLD_NAME_RE.search(_remove_allowed_vendor_identifiers(line)) is None
 
     if relative in {
@@ -467,15 +468,19 @@ class LevelPlayMigrationTest(unittest.TestCase):
             f"com.unity3d.ads-mediation:mediation-sdk:{ANDROID_SDK_VERSION}",
         )
 
-        podfile = self._read_required(EXTENSION / "manifests/ios/Podfile")
+        swift_packages = self._read_required(
+            EXTENSION / "manifests/ios/SwiftPackages.json"
+        )
         ios_versions = re.findall(
-            r"""pod\s+['"]IronSourceSDK['"]\s*,\s*['"]([^'"]+)['"]""",
-            podfile,
+            r'"url":\s*"https://github\.com/ironsource-mobile/LevelPlay-Swift-Package",'
+            r'\s*"version":\s*"([^"]+)"',
+            swift_packages,
         )
         self.assertEqual(
             [IOS_SDK_VERSION],
             ios_versions,
-            f"iOS must declare exactly pod 'IronSourceSDK','{IOS_SDK_VERSION}'",
+            "iOS must declare exactly LevelPlay-Swift-Package "
+            f"version {IOS_SDK_VERSION}",
         )
 
     def test_module_and_project_identity_is_levelplay(self) -> None:

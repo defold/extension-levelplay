@@ -16,7 +16,7 @@ dependencies#1 = https://github.com/defold/extension-automation-bridge/archive/r
 
 [library]
 include_dirs = extension-levelplay
-defold_min_version = 1.13.0
+defold_min_version = 1.14.0
 
 [android]
 iap_provider = GooglePlay
